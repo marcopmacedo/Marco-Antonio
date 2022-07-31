@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Oxygen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root{
+    --background:  rgb(1, 61, 61);
+    --white: white !important;
+    --black: black !important;
+    --font: 'Karla', sans-serif;
+    --font-2: 'Montserrat', sans-serif;
+    --font-3:  'Roboto', sans-serif;;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body,ul{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menubt{
+    color: var(--white);
+    text-decoration: none;
+    font-size: 17px;
+    font-family: var(--font);
+}
+
+.header{
+    display: flex;
+    background: var(--background);
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    padding: 10px;
+}
+
+.logo{
+    font-size: 1.25rem;
+    font-family: var(--font);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 0.5rem;
+    font-size: 1,5rem;
+}
+
+.menu a{
+    display: block;
+    padding: 1rem;
+    border-radius: 0,5rem;
+}
+
+.btn-menu {
+    display: none;
+}
+
+@media (max-width: 800px) {
+
+    .menu {
+      display: block;
+      position: absolute;
+      top: 2,5rem;
+      left: 0;
+      background: var(--background);
+      text-align: center;
+      width: 100%;
+      height: 0;
+      z-index: 1;
+      visibility: hidden;
+      overflow-y: hidden;
+      transition: 0.5s;
+    }
+    .menu a {
+      padding: 1rem 0;
+      margin-inline: 1rem;
+      border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.16);
+      border-radius: 0;
+    }
+    .btn-menu {
+      background: none;
+      border: none;
+      font: inherit;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--white);
+      padding: 1rem 0;
+      cursor: pointer;
+    }
+    .hamburger {
+      border-top: 0.125rem solid;
+      width: 1.25rem;
+    }
+    .hamburger::after,
+    .hamburger::before {
+      content: " ";
+      display: block;
+      width: 1.25rem;
+      height: 0.125rem;
+      background: currentColor;
+      margin-top: 0.3125rem;
+      position: relative;
+      transition: 0.3s;
+    }
+    .nav.active .menu {
+      height: calc(100vh - 4.6875rem);
+      visibility: visible;
+      overflow-y: auto;
+    }
+    .nav.active .hamburger {
+      border-top-color: transparent;
+    }
+    .nav.active .hamburger::before {
+      transform: rotate(135deg);
+    }
+    .nav.active .hamburger::after {
+      transform: rotate(-135deg);
+      top: -0.4375rem;
+    }
+}
+
+.fundo{
+    background-image: url(https://cdn.discordapp.com/attachments/834788333099024454/949775674816757851/Design_sem_nome_1.png);
+    height: 29rem;
+}
+
+.fotoPerfil{
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titulo{
+    text-align: center;
+    color: var(--white);
+    font-family: var(--font-2);
+}
+.subtitulo{
+    text-align: center;
+    color: gray;
+    font-size: 18px;
+    font-family: var(--font);
+}
+.btn-ct{
+    padding: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-decoration: none;
+    color: var(--white);
+    background-color: rgb(49, 48, 48);
+    border-radius: 5px;
+    width: 80px;
+    font-family: var(--font-2);
+
+}
+
+.icones{
+    padding-left: 5px;
+}
+.icons{
+    text-align: center;
+}
+
+.pjtudo{
+  display: block;
+  background-color: rgb(245, 248, 248);
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.TituProjetos{
+  background-color: rgb(238, 235, 235);
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+
+}
+
+.teste{
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--font);
+}
+
+.teste2{
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--font);
+}
+
+.tituloProjeto{
+  text-align: center;
+  font-family: var(--font-3);
+  text-decoration: underline;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.proj{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.modeloProj{
+  height: 14.0625rem;  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sobreM{
+  background: var(--background);
+  text-align: center;
+}
+
+.TituloSobre{
+  text-align: center;
+  font-family: var(--font-3);
+  text-decoration: underline;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.sos{
+  font-size: 1.2rem;
+  font-family: var(--font-2);
+  padding-bottom: 4rem ;
+}
+
+.depoimentos{
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: var(--font-2);
+  padding-bottom: 4rem ;
+}
+
+.contato{
+  background: var(--background);
+  text-align: center;
+}
+
+.livre{
+  font-family: var(--font-3);
+}
+
+.email{
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: rgb(53, 53, 248);
+  font-family: var(--font);
+}
+
+@media (max-width: 600px) {
+  .modeloProj{
+    height: 7rem;  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.copyright{
+  text-align: center;
+  padding: 0.3rem;
+  font-size: 1rem;
+}
